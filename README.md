@@ -246,8 +246,19 @@ Suppose situation:
   ancestor --- commit --- commit --- MASTER
       \
        \
-        commit --- commit --- BR-1
+        commit --- commit --- BR-2
 ```
+
+Checkout MASTER.
+  
+Merge BR-2 to MASTER
+  
+  git merge BR-2
+
+We are prompted to add a merge message.
+  
+If changes were made in both MASTER and BR-2 so that both changes can be directly ADDED to ancestor, the "recursive" merge strategy is followed and nyw content of both MASTER and BR-2 is included in the merged commit object.
+  
 
 
 
