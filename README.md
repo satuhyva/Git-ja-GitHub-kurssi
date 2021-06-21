@@ -257,7 +257,35 @@ Merge BR-2 to MASTER
 
 We are prompted to add a merge message.
   
-If changes were made in both MASTER and BR-2 so that both changes can be directly ADDED to ancestor, the "recursive" merge strategy is followed and nyw content of both MASTER and BR-2 is included in the merged commit object.
+### No conflicts:
+  
+If changes were made in both MASTER and BR-2 so that both changes can be directly ADDED to ancestor, the "recursive" merge strategy is followed and new content of both MASTER and BR-2 is incorporated into the merged commit object.
+
+If there are changes made to same files in both MASTER and BR-2 (compared to ancestor), there will be a merge CONFLICT. Conflict needs to be resolved.
+When looking into files (git ls-files -s) (after the git merge command, files is STAGING AREA), each modified file is present in 3 copies marked with numbers 1, 2 and 3. Meaning of these numbers? 1: Common ancestor version. 2: Version in MASTER (receiving branch). 3: Version in BR-2 (that we want to merge to MASTER). Git command "cat /<file name>" will display contents of the file (in working directory) with the issue to be resolved (= combination of the previous versions).
+  
+  
+### Resolve merge conflict:
+
+Conflict can be resolved for example with nano editor. (Just modify the file to keep the content you wish).
+
+After resolving conflict, "git add \n<file name>"  to stage the resolved file (add resolved file from working directory to staging area)!
+  
+Conflict can also be resolved in VS Code (offers options on how to proceed, for example accept incoming changes (from BR-2)). Also remember to add to staging area.
+ 
+When all conflicts have been resolved, git status shows that "all conflicts fixed but you are still merging". Just add "git commit".
+
+
+
+  
+
+
+
+  
+
+  
+
+
   
 
 
