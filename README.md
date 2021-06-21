@@ -200,8 +200,10 @@ Default is ref: refs/heads/master
 ## Checkout a specific branch
 Git checkout takes a version from repository and takes it's contents to working directory.
 It just moves HEAD pointer!
+
 git branch = list local branches
-git branch <name> = create new branch
+
+git branch <<name>> = create new branch
 
 
 
