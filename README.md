@@ -244,8 +244,11 @@ At the merge process, the HEAD pointer (of the receiving branch MASTER) is moved
 Suppose situation:
   
   ancestor --- commit --- commit --- MASTER
+  
       |
+  
       |
+  
     commit --- commit --- BR-1
 
 
