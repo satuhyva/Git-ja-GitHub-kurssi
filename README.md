@@ -203,7 +203,7 @@ It just moves HEAD pointer!
 
 git branch = list local branches
 
-git branch <<name>> = create new branch
+git branch \<name> = create new branch
 
 
 
