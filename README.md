@@ -220,9 +220,22 @@ git checkout -b \<name> = create and checkout branch simultaneously
   
 # MERGING BRANCHES
 
-## FAST FORWARD BRANCH
-  
+## FAST FORWARD MERGE
 
+1. Create new feature branch, like BR-1, from MASTER.
+2. Make changes to BR-1 and commit.
+3. Checkout receiving branch, like MASTER.
+4. Merge feature branch BR-1 to checked out MASTER with
+  ```
+  git merge <BR-1>
+  ```
+  
+  
+Receiving branch = branch that receives changes.
+Fast forward merge is possible only when no further commits have been made to the receiving branch (to which we are merging, like MASTER) after we created the branch (like BR-1 that we wish to merge) from it.
+ 
+When merging branch BR-1 to MASTER, first checkout MASTER (so that HEAD points to MASTER).
+At the merge process, the HEAD pointer is moved to last commit of BR-1.
 
 
 
