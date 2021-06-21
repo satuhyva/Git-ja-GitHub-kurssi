@@ -184,6 +184,27 @@ git checkout
 - staged
 
 
+## BRANCH AND HEAD
+
+Branch is a text reference to a specific commit.
+Pointer to a branch is located in .git/refs/heads.
+There may be several branches.
+
+How does Git know which branch is current?
+Head is pointer to specific commit. There may be only one HEAD.
+Head is pointer to currently checked out branch.
+Pointer to head is in .git/HEAD
+Default is ref: refs/heads/master
+
+
+## Checkout a specific branch
+Git checkout takes a version from repository and takes it's contents to working directory.
+It just moves HEAD pointer!
+git branch = list local branches
+git branch <name> = create new branch
+
+
+
 
 
 
