@@ -235,9 +235,18 @@ Receiving branch = branch that receives changes.
 Fast forward merge is possible only when no further commits have been made to the receiving branch (to which we are merging, like MASTER) after we created the branch (like BR-1 that we wish to merge) from it.
  
 When merging branch BR-1 to MASTER, first checkout MASTER (so that HEAD points to MASTER).
-At the merge process, the HEAD pointer is moved to last commit of BR-1.
+At the merge process, the HEAD pointer (of the receiving branch MASTER) is moved to last commit of BR-1.
 
 
+  
+## THREE-WAY MERGE
+
+Suppose situation:
+  
+  ancestor --- commit --- commit --- MASTER
+      |
+      |
+    commit --- commit --- BR-1
 
 
 
