@@ -201,9 +201,28 @@ Default is ref: refs/heads/master
 Git checkout takes a version from repository and takes it's contents to working directory.
 It just moves HEAD pointer!
 
+
+## Git branch management
+
 git branch = list local branches
 
-git branch \<name> = create new branch
+git branch \<name> = create new branch (name cannot contain a space; branch will nt become checked out)
+
+git checkout \<name> = checkout specific branch
+
+git branch -d \<name> = delete specific branch (lowercase d: only merged branch can be deleted; uppercase D will force deletion for unmerged branch)
+
+git branch -m <old name> \<new name> = rename specific branch
+  
+git checkout -b \<name> = create and checkout branch simultaneously
+  
+
+  
+# MERGING BRANCHES
+
+## FAST FORWARD BRANCH
+  
+
 
 
 
